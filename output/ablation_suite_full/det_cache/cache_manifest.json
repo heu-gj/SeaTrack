@@ -1,0 +1,192 @@
+{
+  "0001": {
+    "seq_name": "0001",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0001.pkl",
+    "cached": true
+  },
+  "0002": {
+    "seq_name": "0002",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0002.pkl",
+    "cached": true
+  },
+  "0003": {
+    "seq_name": "0003",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0003.pkl",
+    "cached": true
+  },
+  "0005": {
+    "seq_name": "0005",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0005.pkl",
+    "cached": true
+  },
+  "0009": {
+    "seq_name": "0009",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0009.pkl",
+    "cached": true
+  },
+  "0010": {
+    "seq_name": "0010",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0010.pkl",
+    "cached": true
+  },
+  "0011": {
+    "seq_name": "0011",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0011.pkl",
+    "cached": true
+  },
+  "0012": {
+    "seq_name": "0012",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0012.pkl",
+    "cached": true
+  },
+  "0014": {
+    "seq_name": "0014",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0014.pkl",
+    "cached": true
+  },
+  "0020": {
+    "seq_name": "0020",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0020.pkl",
+    "cached": true
+  },
+  "0028": {
+    "seq_name": "0028",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0028.pkl",
+    "cached": true
+  },
+  "0040": {
+    "seq_name": "0040",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0040.pkl",
+    "cached": true
+  },
+  "0043": {
+    "seq_name": "0043",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0043.pkl",
+    "cached": true
+  },
+  "0047": {
+    "seq_name": "0047",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0047.pkl",
+    "cached": true
+  },
+  "0051": {
+    "seq_name": "0051",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0051.pkl",
+    "cached": true
+  },
+  "0058": {
+    "seq_name": "0058",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0058.pkl",
+    "cached": true
+  },
+  "0081": {
+    "seq_name": "0081",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0081.pkl",
+    "cached": true
+  },
+  "0086": {
+    "seq_name": "0086",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0086.pkl",
+    "cached": true
+  },
+  "0087": {
+    "seq_name": "0087",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0087.pkl",
+    "cached": true
+  },
+  "0088": {
+    "seq_name": "0088",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0088.pkl",
+    "cached": true
+  },
+  "0089": {
+    "seq_name": "0089",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0089.pkl",
+    "cached": true
+  },
+  "0090": {
+    "seq_name": "0090",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0090.pkl",
+    "cached": true
+  },
+  "0091": {
+    "seq_name": "0091",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0091.pkl",
+    "cached": true
+  },
+  "0092": {
+    "seq_name": "0092",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0092.pkl",
+    "cached": true
+  },
+  "0096": {
+    "seq_name": "0096",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0096.pkl",
+    "cached": true
+  },
+  "0129": {
+    "seq_name": "0129",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0129.pkl",
+    "cached": true
+  },
+  "0131": {
+    "seq_name": "0131",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0131.pkl",
+    "cached": true
+  },
+  "0137": {
+    "seq_name": "0137",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0137.pkl",
+    "cached": true
+  },
+  "0143": {
+    "seq_name": "0143",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0143.pkl",
+    "cached": true
+  },
+  "0145": {
+    "seq_name": "0145",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0145.pkl",
+    "cached": true
+  },
+  "0146": {
+    "seq_name": "0146",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0146.pkl",
+    "cached": true
+  },
+  "0151": {
+    "seq_name": "0151",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0151.pkl",
+    "cached": true
+  },
+  "0157": {
+    "seq_name": "0157",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0157.pkl",
+    "cached": true
+  },
+  "0158": {
+    "seq_name": "0158",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0158.pkl",
+    "cached": true
+  },
+  "0166": {
+    "seq_name": "0166",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0166.pkl",
+    "cached": true
+  },
+  "0176": {
+    "seq_name": "0176",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0176.pkl",
+    "cached": true
+  },
+  "0177": {
+    "seq_name": "0177",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0177.pkl",
+    "cached": true
+  },
+  "0181": {
+    "seq_name": "0181",
+    "cache_file": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\det_cache\\0181.pkl",
+    "cached": true
+  }
+}

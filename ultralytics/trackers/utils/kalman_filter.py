@@ -142,11 +142,18 @@ class KalmanFilterXYAH:
             >>> covariance = np.eye(8)
             >>> projected_mean, projected_covariance = kf.project(mean, covariance)
         """
+        # std = [
+        #     self._std_weight_position * mean[3],
+        #     self._std_weight_position * mean[3],
+        #     1e-1,
+        #     self._std_weight_position * mean[3],
+        # ]
+
         std = [
-            self._std_weight_position * mean[3],
-            self._std_weight_position * mean[3],
-            1e-1,
-            self._std_weight_position * mean[3],
+            0,
+            0,
+            0,
+            0,
         ]
         innovation_cov = np.diag(np.square(std))
 

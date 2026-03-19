@@ -1,0 +1,125 @@
+{
+  "detector": "E:\\Code\\PRCV\\ultralytics\\prcv_detect\\yolo26_visible_7168\\weights\\best.pt",
+  "detector_mode": "full",
+  "imgsz": 1280,
+  "sequence_names": [
+    "0001",
+    "0002",
+    "0003",
+    "0005",
+    "0009",
+    "0010",
+    "0011",
+    "0012",
+    "0014",
+    "0020",
+    "0028",
+    "0040",
+    "0043",
+    "0047",
+    "0051",
+    "0058",
+    "0081",
+    "0086",
+    "0087",
+    "0088",
+    "0089",
+    "0090",
+    "0091",
+    "0092",
+    "0096",
+    "0129",
+    "0131",
+    "0137",
+    "0143",
+    "0145",
+    "0146",
+    "0151",
+    "0157",
+    "0158",
+    "0166",
+    "0176",
+    "0177",
+    "0181"
+  ],
+  "trackers": [
+    "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_innov1_only.yaml",
+    "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_innov2_only.yaml",
+    "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml"
+  ],
+  "results": [
+    {
+      "tracker_name": "bytetrack_baseline",
+      "result_root": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline",
+      "overall": {
+        "Sequence": "OVERALL",
+        "HOTA": null,
+        "IDF1": 31.383593298671286,
+        "MOTA": 39.28561829763216,
+        "IDs": 3046,
+        "FP": 261,
+        "FN": 19283,
+        "Precision": 98.56475116854551,
+        "Recall": 48.173730749590135,
+        "IDP": 47.79763541380259,
+        "IDR": 23.36119547396995,
+        "Frames": 6869
+      }
+    },
+    {
+      "tracker_name": "sealinetracker_full",
+      "result_root": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full",
+      "overall": {
+        "Sequence": "OVERALL",
+        "HOTA": null,
+        "IDF1": 53.92297148709916,
+        "MOTA": 69.14827854973527,
+        "IDs": 1928,
+        "FP": 764,
+        "FN": 8787,
+        "Precision": 97.38212719298247,
+        "Recall": 76.38347622759159,
+        "IDP": 61.33497807017544,
+        "IDR": 48.109226758405676,
+        "Frames": 6875
+      }
+    },
+    {
+      "tracker_name": "sealinetracker_innov1_only",
+      "result_root": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_innov1_only",
+      "overall": {
+        "Sequence": "OVERALL",
+        "HOTA": null,
+        "IDF1": 44.68679907681305,
+        "MOTA": 56.844142231300566,
+        "IDs": 2467,
+        "FP": 351,
+        "FN": 13239,
+        "Precision": 98.55668407418068,
+        "Recall": 64.41798586287526,
+        "IDP": 56.5278177556643,
+        "IDR": 36.94734861719569,
+        "Frames": 6873
+      }
+    },
+    {
+      "tracker_name": "sealinetracker_innov2_only",
+      "result_root": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_innov2_only",
+      "overall": {
+        "Sequence": "OVERALL",
+        "HOTA": null,
+        "IDF1": 53.02238919942576,
+        "MOTA": 67.56793076571613,
+        "IDs": 1823,
+        "FP": 654,
+        "FN": 9590,
+        "Precision": 97.68667539174419,
+        "Recall": 74.2252801892117,
+        "IDP": 61.402143539315915,
+        "IDR": 46.655199290456096,
+        "Frames": 6874
+      }
+    }
+  ]
+}

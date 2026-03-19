@@ -1,0 +1,268 @@
+{
+  "0001": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0001\\0001.txt",
+    "frames": 127,
+    "tracks_written": 287,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0002": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0002\\0002.txt",
+    "frames": 119,
+    "tracks_written": 221,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0003": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0003\\0003.txt",
+    "frames": 116,
+    "tracks_written": 497,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0005": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0005\\0005.txt",
+    "frames": 130,
+    "tracks_written": 371,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0009": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0009\\0009.txt",
+    "frames": 119,
+    "tracks_written": 433,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0010": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0010\\0010.txt",
+    "frames": 121,
+    "tracks_written": 138,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0011": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0011\\0011.txt",
+    "frames": 113,
+    "tracks_written": 173,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0012": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0012\\0012.txt",
+    "frames": 104,
+    "tracks_written": 169,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0014": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0014\\0014.txt",
+    "frames": 118,
+    "tracks_written": 838,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0020": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0020\\0020.txt",
+    "frames": 277,
+    "tracks_written": 907,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0028": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0028\\0028.txt",
+    "frames": 224,
+    "tracks_written": 767,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0040": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0040\\0040.txt",
+    "frames": 500,
+    "tracks_written": 1481,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0043": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0043\\0043.txt",
+    "frames": 126,
+    "tracks_written": 1197,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0047": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0047\\0047.txt",
+    "frames": 127,
+    "tracks_written": 1351,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0051": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0051\\0051.txt",
+    "frames": 357,
+    "tracks_written": 2660,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0058": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0058\\0058.txt",
+    "frames": 499,
+    "tracks_written": 2140,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0081": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0081\\0081.txt",
+    "frames": 130,
+    "tracks_written": 121,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0086": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0086\\0086.txt",
+    "frames": 124,
+    "tracks_written": 117,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0087": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0087\\0087.txt",
+    "frames": 67,
+    "tracks_written": 127,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0088": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0088\\0088.txt",
+    "frames": 69,
+    "tracks_written": 69,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0089": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0089\\0089.txt",
+    "frames": 134,
+    "tracks_written": 278,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0090": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0090\\0090.txt",
+    "frames": 115,
+    "tracks_written": 182,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0091": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0091\\0091.txt",
+    "frames": 415,
+    "tracks_written": 1697,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0092": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0092\\0092.txt",
+    "frames": 468,
+    "tracks_written": 781,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0096": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0096\\0096.txt",
+    "frames": 118,
+    "tracks_written": 169,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0129": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0129\\0129.txt",
+    "frames": 134,
+    "tracks_written": 84,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0131": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0131\\0131.txt",
+    "frames": 116,
+    "tracks_written": 623,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0137": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0137\\0137.txt",
+    "frames": 78,
+    "tracks_written": 74,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0143": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0143\\0143.txt",
+    "frames": 112,
+    "tracks_written": 460,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0145": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0145\\0145.txt",
+    "frames": 108,
+    "tracks_written": 338,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0146": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0146\\0146.txt",
+    "frames": 100,
+    "tracks_written": 593,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0151": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0151\\0151.txt",
+    "frames": 116,
+    "tracks_written": 472,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0157": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0157\\0157.txt",
+    "frames": 443,
+    "tracks_written": 2365,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0158": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0158\\0158.txt",
+    "frames": 552,
+    "tracks_written": 2535,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0166": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0166\\0166.txt",
+    "frames": 110,
+    "tracks_written": 726,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0176": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0176\\0176.txt",
+    "frames": 121,
+    "tracks_written": 438,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0177": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0177\\0177.txt",
+    "frames": 118,
+    "tracks_written": 769,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  },
+  "0181": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\sealinetracker_full\\0181\\0181.txt",
+    "frames": 127,
+    "tracks_written": 2536,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\sealinetracker_full.yaml",
+    "tracker_type": "sealinetracker"
+  }
+}

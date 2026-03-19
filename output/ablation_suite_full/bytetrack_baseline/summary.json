@@ -1,0 +1,268 @@
+{
+  "0001": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0001\\0001.txt",
+    "frames": 127,
+    "tracks_written": 175,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0002": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0002\\0002.txt",
+    "frames": 119,
+    "tracks_written": 194,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0003": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0003\\0003.txt",
+    "frames": 116,
+    "tracks_written": 359,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0005": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0005\\0005.txt",
+    "frames": 130,
+    "tracks_written": 297,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0009": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0009\\0009.txt",
+    "frames": 119,
+    "tracks_written": 374,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0010": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0010\\0010.txt",
+    "frames": 121,
+    "tracks_written": 63,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0011": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0011\\0011.txt",
+    "frames": 113,
+    "tracks_written": 155,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0012": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0012\\0012.txt",
+    "frames": 104,
+    "tracks_written": 120,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0014": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0014\\0014.txt",
+    "frames": 118,
+    "tracks_written": 648,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0020": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0020\\0020.txt",
+    "frames": 277,
+    "tracks_written": 602,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0028": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0028\\0028.txt",
+    "frames": 224,
+    "tracks_written": 600,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0040": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0040\\0040.txt",
+    "frames": 500,
+    "tracks_written": 893,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0043": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0043\\0043.txt",
+    "frames": 126,
+    "tracks_written": 656,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0047": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0047\\0047.txt",
+    "frames": 127,
+    "tracks_written": 830,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0051": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0051\\0051.txt",
+    "frames": 357,
+    "tracks_written": 2330,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0058": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0058\\0058.txt",
+    "frames": 499,
+    "tracks_written": 1379,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0081": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0081\\0081.txt",
+    "frames": 130,
+    "tracks_written": 102,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0086": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0086\\0086.txt",
+    "frames": 124,
+    "tracks_written": 114,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0087": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0087\\0087.txt",
+    "frames": 67,
+    "tracks_written": 64,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0088": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0088\\0088.txt",
+    "frames": 69,
+    "tracks_written": 68,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0089": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0089\\0089.txt",
+    "frames": 134,
+    "tracks_written": 205,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0090": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0090\\0090.txt",
+    "frames": 115,
+    "tracks_written": 168,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0091": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0091\\0091.txt",
+    "frames": 415,
+    "tracks_written": 939,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0092": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0092\\0092.txt",
+    "frames": 468,
+    "tracks_written": 333,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0096": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0096\\0096.txt",
+    "frames": 118,
+    "tracks_written": 76,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0129": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0129\\0129.txt",
+    "frames": 134,
+    "tracks_written": 77,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0131": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0131\\0131.txt",
+    "frames": 116,
+    "tracks_written": 397,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0137": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0137\\0137.txt",
+    "frames": 78,
+    "tracks_written": 69,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0143": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0143\\0143.txt",
+    "frames": 112,
+    "tracks_written": 257,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0145": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0145\\0145.txt",
+    "frames": 108,
+    "tracks_written": 307,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0146": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0146\\0146.txt",
+    "frames": 100,
+    "tracks_written": 218,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0151": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0151\\0151.txt",
+    "frames": 116,
+    "tracks_written": 280,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0157": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0157\\0157.txt",
+    "frames": 443,
+    "tracks_written": 1229,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0158": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0158\\0158.txt",
+    "frames": 552,
+    "tracks_written": 1646,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0166": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0166\\0166.txt",
+    "frames": 110,
+    "tracks_written": 663,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0176": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0176\\0176.txt",
+    "frames": 121,
+    "tracks_written": 311,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0177": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0177\\0177.txt",
+    "frames": 118,
+    "tracks_written": 201,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  },
+  "0181": {
+    "mot_txt": "E:\\Code\\PRCV\\ultralytics\\output\\ablation_suite_full\\bytetrack_baseline\\0181\\0181.txt",
+    "frames": 127,
+    "tracks_written": 786,
+    "tracker_yaml": "E:\\Code\\PRCV\\ultralytics\\ultralytics\\cfg\\trackers\\ablations\\bytetrack_baseline.yaml",
+    "tracker_type": "bytetrack"
+  }
+}

@@ -1,0 +1,40 @@
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+
+# SealineTracker defaults for mode="track"
+
+tracker_type: sealinetracker # (str) Tracker backend: sealinetracker
+track_high_thresh: 0.25 # (float) First-stage match threshold
+track_low_thresh: 0.1 # (float) Second-stage threshold for low-score matches
+new_track_thresh: 0.25 # (float) Start a new track if no match >= this
+track_buffer: 30 # (int) Frames to keep lost tracks alive
+match_thresh: 0.8 # (float) Association cost threshold for Hungarian matching
+fuse_score: True # (bool) Fuse detection score with final association cost
+use_adaptive_iou: True # (bool) Ablation switch for innovation 1
+use_sea_geo_cost: True # (bool) Ablation switch for innovation 2
+use_direction_aware_center: True # (bool) Use sea-surface direction-aware center distance
+use_asymmetric_scale: False # (bool) Use width-height asymmetric scale loss
+use_scale_aware_weights: True # (bool) Use target-scale-dependent geometry weights
+
+# Innovation 1: Relative-Scale Adaptive IoU
+adaptive_iou_alpha: 4.0 # (float) Main tuning parameter: expansion strength in s(r)=1+alpha*exp(-beta*r)
+adaptive_iou_beta: 12.0 # (float) Main tuning parameter: decay rate in s(r)
+adaptive_iou_lambda_tau: 0.04 # (float) Main tuning parameter: fusion control in lambda(r)=r/(r+tau)
+adaptive_iou_min_scale: 1.0 # (float) Usually fixed
+adaptive_iou_max_scale: 5.0 # (float) Usually fixed; lower only if nearby targets cross-match
+adaptive_iou_x_bias: 1.0 # (float) Usually fixed
+adaptive_iou_y_bias: 1.15 # (float) Usually fixed; slightly increase if vertical wave jitter is strong
+adaptive_iou_eps: 1.0e-6 # (float) Numerical stability term; fixed
+
+# Innovation 2: Sea-Geo Cost
+geom_scale_transition: 0.05 # (float) Main tuning parameter: small-target/large-target transition point
+geom_center_y_weight: 0.6 # (float) Main tuning parameter: lower tolerates vertical wave jitter
+geom_scale_height_weight: 0.4 # (float) Main tuning parameter: width weight is auto-set to 1 - this value
+
+# Innovation 3: Sea-Recovery Matching
+use_recovery_matching: False # (bool) Modular third-stage recovery matching; disabled by default for the two-innovation paper version
+recovery_match_thresh: 0.35 # (float) Cost threshold for the recovery matching stage
+recovery_motion_gate: 0.12 # (float) Motion gate; larger allows more aggressive recovery
+recovery_motion_weight: 0.5 # (float) Motion term weight in recovery matching
+recovery_center_weight: 0.3 # (float) Direction-aware center term weight in recovery matching
+recovery_scale_weight: 0.2 # (float) Scale term weight in recovery matching
+recovery_use_class_gate: True # (bool) Only allow recovery matching for class-consistent track-detection pairs
