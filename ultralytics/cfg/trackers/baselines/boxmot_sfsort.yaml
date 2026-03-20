@@ -1,0 +1,10 @@
+# BoxMOT baseline wrapper: SFSORT
+
+tracker_type: boxmot
+boxmot_tracker: sfsort
+boxmot_config: E:\Code\PRCV\boxmot-master\boxmot\configs\trackers\sfsort.yaml
+reid_weights: ""
+device: ""
+half: False
+per_class: False
+display_name: boxmot_sfsort

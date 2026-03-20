@@ -1,0 +1,10 @@
+# BoxMOT baseline wrapper: OCSORT
+
+tracker_type: boxmot
+boxmot_tracker: ocsort
+boxmot_config: E:\Code\PRCV\boxmot-master\boxmot\configs\trackers\ocsort.yaml
+reid_weights: ""
+device: ""
+half: False
+per_class: False
+display_name: boxmot_ocsort

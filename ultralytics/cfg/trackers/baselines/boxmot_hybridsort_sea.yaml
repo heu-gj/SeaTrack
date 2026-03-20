@@ -1,0 +1,10 @@
+# BoxMOT baseline wrapper: HybridSORT-Sea
+
+tracker_type: boxmot
+boxmot_tracker: hybridsort_sea
+boxmot_config: E:\Code\PRCV\boxmot-master\boxmot\configs\trackers\hybridsort_sea.yaml
+reid_weights: ""
+device: ""
+half: False
+per_class: False
+display_name: boxmot_hybridsort_sea

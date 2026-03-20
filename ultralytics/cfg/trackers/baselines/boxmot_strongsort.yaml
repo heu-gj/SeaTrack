@@ -1,0 +1,10 @@
+# BoxMOT baseline wrapper: StrongSORT
+
+tracker_type: boxmot
+boxmot_tracker: strongsort
+boxmot_config: E:\Code\PRCV\boxmot-master\boxmot\configs\trackers\strongsort.yaml
+reid_weights: ""
+device: ""
+half: False
+per_class: False
+display_name: boxmot_strongsort

@@ -1,0 +1,10 @@
+# BoxMOT baseline wrapper: ByteTrack
+
+tracker_type: boxmot
+boxmot_tracker: bytetrack
+boxmot_config: E:\Code\PRCV\boxmot-master\boxmot\configs\trackers\bytetrack.yaml
+reid_weights: ""
+device: ""
+half: False
+per_class: False
+display_name: boxmot_bytetrack
