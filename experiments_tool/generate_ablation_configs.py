@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Generate SealineTracker ablation YAML files.")
+    parser = argparse.ArgumentParser(description="Generate the paper-oriented SeaTrack ablation YAML files.")
     parser.add_argument(
         "--base",
         default=r"E:\Code\PRCV\ultralytics\ultralytics\cfg\trackers\sealinetracker.yaml",
@@ -13,7 +13,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--out-dir",
-        default=r"E:\Code\PRCV\ultralytics\experiments\generated_trackers",
+        default=r"E:\Code\PRCV\ultralytics\ultralytics\cfg\trackers\ablations",
         help="Output directory for generated tracker YAML files.",
     )
     return parser.parse_args()
@@ -65,25 +65,45 @@ def main() -> None:
     base_lines, _base_values = load_flat_yaml(base_path)
 
     variants = {
-        "sealinetracker_paper.yaml": {},
-        "sealinetracker_innov1.yaml": {
+        "seatrack_rsa_iou_sgl.yaml": {},
+        "seatrack_rsa_iou.yaml": {
             "use_adaptive_iou": "True",
             "use_sea_geo_cost": "False",
+            "use_direction_aware_center": "True",
+            "use_asymmetric_scale": "True",
+            "use_ratio_loss": "True",
+            "use_recovery_matching": "False",
+        },
+        "seatrack_sgl.yaml": {
+            "use_adaptive_iou": "False",
+            "use_sea_geo_cost": "True",
+            "use_direction_aware_center": "True",
+            "use_asymmetric_scale": "True",
+            "use_ratio_loss": "True",
+            "use_recovery_matching": "False",
+        },
+        "seatrack_sgl_wo_scl.yaml": {
+            "use_adaptive_iou": "False",
+            "use_sea_geo_cost": "True",
             "use_direction_aware_center": "False",
+            "use_asymmetric_scale": "True",
+            "use_ratio_loss": "True",
+            "use_recovery_matching": "False",
+        },
+        "seatrack_sgl_wo_srl.yaml": {
+            "use_adaptive_iou": "False",
+            "use_sea_geo_cost": "True",
+            "use_direction_aware_center": "True",
+            "use_asymmetric_scale": "True",
+            "use_ratio_loss": "False",
+            "use_recovery_matching": "False",
+        },
+        "seatrack_sgl_wo_ssl.yaml": {
+            "use_adaptive_iou": "False",
+            "use_sea_geo_cost": "True",
+            "use_direction_aware_center": "True",
             "use_asymmetric_scale": "False",
-            "use_scale_aware_weights": "False",
-            "use_recovery_matching": "False",
-        },
-        "sealinetracker_wo_direction_aware_center.yaml": {
-            "use_direction_aware_center": "False",
-            "use_recovery_matching": "False",
-        },
-        "sealinetracker_wo_asymmetric_scale.yaml": {
-            "use_asymmetric_scale": "False",
-            "use_recovery_matching": "False",
-        },
-        "sealinetracker_wo_scale_aware_weights.yaml": {
-            "use_scale_aware_weights": "False",
+            "use_ratio_loss": "True",
             "use_recovery_matching": "False",
         },
     }
@@ -92,17 +112,18 @@ def main() -> None:
         write_variant(base_lines, out_dir / filename, overrides)
 
     readme = [
-        "# Generated Tracker Configs",
+        "# SeaTrack Paper Ablation Configs",
         "",
         "Files:",
         "",
-        "- `sealinetracker_paper.yaml`: default two-innovation paper version.",
-        "- `sealinetracker_innov1.yaml`: only innovation 1 enabled.",
-        "- `sealinetracker_wo_direction_aware_center.yaml`: innovation 2 without direction-aware center loss.",
-        "- `sealinetracker_wo_asymmetric_scale.yaml`: innovation 2 without asymmetric width-height scale loss.",
-        "- `sealinetracker_wo_scale_aware_weights.yaml`: innovation 2 without scale-aware dynamic weights.",
+        "- `seatrack_rsa_iou_sgl.yaml`: full paper version (`RSA-IoU + SGL`).",
+        "- `seatrack_rsa_iou.yaml`: only `RSA-IoU` enabled.",
+        "- `seatrack_sgl.yaml`: only `SGL` enabled.",
+        "- `seatrack_sgl_wo_scl.yaml`: `SGL` without `SCL`.",
+        "- `seatrack_sgl_wo_srl.yaml`: `SGL` without `SRL`.",
+        "- `seatrack_sgl_wo_ssl.yaml`: `SGL` without `SSL`.",
         "",
-        "Use official `ultralytics/cfg/trackers/bytetrack.yaml` as the baseline config for ByteTrack.",
+        "Use `bytetrack_baseline.yaml` as the ByteTrack baseline config.",
         "",
     ]
     (out_dir / "README.md").write_text("\n".join(readme), encoding="utf-8")

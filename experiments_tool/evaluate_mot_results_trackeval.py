@@ -100,11 +100,13 @@ def read_sequence_meta(gt_root: Path, seq_name: str) -> dict[str, Any]:
     if image is None:
         raise FileNotFoundError(f"Failed to read first image for sequence {seq_name}: {images[0]}")
     h, w = image.shape[:2]
+    numeric_stems = [int(p.stem) for p in images if p.stem.isdigit()]
+    seq_length = max(numeric_stems) if numeric_stems else len(images)
     return {
         "seq_name": seq_name,
         "image_dir": image_dir,
         "gt_file": gt_file,
-        "seq_length": len(images),
+        "seq_length": seq_length,
         "im_width": w,
         "im_height": h,
         "frame_rate": 30,
@@ -127,6 +129,21 @@ def write_seqinfo_ini(seq_dir: Path, meta: dict[str, Any]) -> None:
         ]
     )
     (seq_dir / "seqinfo.ini").write_text(content, encoding="utf-8")
+
+
+def normalize_mot_class_ids(src: Path, dst: Path, target_class_id: int = 1) -> None:
+    """Copy a MOT-format txt file while collapsing all category ids to one class for TrackEval."""
+    normalized_lines: list[str] = []
+    with src.open("r", encoding="utf-8") as f:
+        for raw_line in f:
+            line = raw_line.strip()
+            if not line:
+                continue
+            parts = [part.strip() for part in line.split(",")]
+            if len(parts) >= 8:
+                parts[7] = str(target_class_id)
+            normalized_lines.append(",".join(parts))
+    dst.write_text("\n".join(normalized_lines) + ("\n" if normalized_lines else ""), encoding="utf-8")
 
 
 def prepare_trackeval_workspace(
@@ -168,8 +185,8 @@ def prepare_trackeval_workspace(
         seq_gt_dir = gt_benchmark_dir / seq_name
         (seq_gt_dir / "gt").mkdir(parents=True, exist_ok=True)
         write_seqinfo_ini(seq_gt_dir, meta)
-        shutil.copy2(meta["gt_file"], seq_gt_dir / "gt" / "gt.txt")
-        shutil.copy2(result_file, tracker_benchmark_dir / f"{seq_name}.txt")
+        normalize_mot_class_ids(meta["gt_file"], seq_gt_dir / "gt" / "gt.txt")
+        normalize_mot_class_ids(result_file, tracker_benchmark_dir / f"{seq_name}.txt")
         used_sequences.append(seq_name)
 
     seqmap_path = seqmaps_dir / f"{benchmark_name}-{split_name}.txt"
@@ -218,9 +235,12 @@ def run_trackeval(trackeval_root: Path, prep: dict[str, Any], output_root: Path)
 
 
 def find_summary_file(trackeval_output_root: Path, tracker_name: str) -> Path:
-    candidates = list(trackeval_output_root.rglob(f"{tracker_name}*.csv"))
+    candidates = list(trackeval_output_root.rglob("*.csv"))
     for candidate in candidates:
         if candidate.name.lower().endswith("_summary.csv") or candidate.name.lower() == "pedestrian_summary.csv":
+            return candidate
+    for candidate in candidates:
+        if candidate.name.lower().endswith("_detailed.csv") or candidate.name.lower() == "pedestrian_detailed.csv":
             return candidate
     for candidate in candidates:
         return candidate
@@ -230,7 +250,11 @@ def find_summary_file(trackeval_output_root: Path, tracker_name: str) -> Path:
 def load_trackeval_summary(summary_csv: Path) -> list[dict[str, Any]]:
     with summary_csv.open("r", encoding="utf-8-sig") as f:
         reader = csv.DictReader(f)
-        return list(reader)
+        rows = list(reader)
+    if summary_csv.name.lower().endswith("_detailed.csv") or summary_csv.name.lower() == "pedestrian_detailed.csv":
+        combined_rows = [row for row in rows if str(row.get("seq", "")).upper() == "COMBINED"]
+        return combined_rows or rows[-1:] if rows else []
+    return rows
 
 
 def write_manifest(output_dir: Path, prep: dict[str, Any], summary_csv: Path, summary_rows: list[dict[str, Any]]) -> None:
@@ -270,6 +294,20 @@ def main() -> None:
         benchmark_name=args.benchmark_name,
         split_name=args.split_name,
     )
+    if not prep["used_sequences"]:
+        payload = {
+            "summary_csv": "",
+            "rows": [],
+            "skipped": True,
+            "reason": "no_usable_sequences",
+            "workspace": prep,
+        }
+        (output_dir / "trackeval_manifest.json").write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        print(json.dumps(payload, indent=2, ensure_ascii=False))
+        return
     run_trackeval(trackeval_root, prep, output_dir / "trackeval_output")
     summary_csv = find_summary_file(output_dir / "trackeval_output", prep["tracker_name"])
     summary_rows = load_trackeval_summary(summary_csv)

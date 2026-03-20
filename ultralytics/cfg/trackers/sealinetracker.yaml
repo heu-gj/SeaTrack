@@ -12,8 +12,9 @@ fuse_score: True # (bool) Fuse detection score with final association cost
 use_adaptive_iou: True # (bool) Ablation switch for innovation 1
 use_sea_geo_cost: True # (bool) Ablation switch for innovation 2
 use_direction_aware_center: True # (bool) Use sea-surface direction-aware center distance
+use_ratio_loss: True # (bool) Use sea-aware ratio loss (SRL)
 use_asymmetric_scale: True # (bool) Use width-height asymmetric scale loss
-use_scale_aware_weights: True # (bool) Use target-scale-dependent geometry weights
+use_scale_aware_weights: False # (bool) SAW removed from current paper version; use fixed geometry weights
 
 # Innovation 1: Relative-Scale Adaptive IoU
 adaptive_iou_alpha: 4.0 # (float) Main tuning parameter: expansion strength in s(r)=1+alpha*exp(-beta*r)

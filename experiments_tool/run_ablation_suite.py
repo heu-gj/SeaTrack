@@ -36,11 +36,12 @@ from sealine_mot_runner import (
 )
 
 
-DEFAULT_TRACKERS = [
-    r"E:\Code\PRCV\ultralytics\ultralytics\cfg\trackers\ablations\bytetrack_baseline.yaml",
-    r"E:\Code\PRCV\ultralytics\ultralytics\cfg\trackers\ablations\sealinetracker_innov1_only.yaml",
-    r"E:\Code\PRCV\ultralytics\ultralytics\cfg\trackers\ablations\sealinetracker_innov2_only.yaml",
-    r"E:\Code\PRCV\ultralytics\ultralytics\cfg\trackers\ablations\sealinetracker_full.yaml",
+ABLATION_DIR = Path(r"E:\Code\PRCV\ultralytics\ultralytics\cfg\trackers\ablations")
+DEFAULT_MAIN_TRACKERS = [
+    str(ABLATION_DIR / "bytetrack_baseline.yaml"),
+    str(ABLATION_DIR / "seatrack_rsa_iou.yaml"),
+    str(ABLATION_DIR / "seatrack_sgl.yaml"),
+    str(ABLATION_DIR / "seatrack_rsa_iou_sgl.yaml"),
 ]
 
 
@@ -224,12 +225,12 @@ def worker_run_tracker(job: dict[str, Any]) -> dict[str, Any]:
 
 def parse_tracker_yamls(trackers: str | None) -> list[str]:
     if not trackers:
-        return list(DEFAULT_TRACKERS)
+        return list(DEFAULT_MAIN_TRACKERS)
     return [item.strip() for item in trackers.split(",") if item.strip()]
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Run a one-click ablation suite with cached detections.")
+    parser = argparse.ArgumentParser(description="Run the main SeaTrack paper ablation suite with cached detections.")
     parser.add_argument("--detector", required=True, help="Path to detector weights.")
     parser.add_argument("--detector-mode", default="full", choices=("full", "two-slice"))
     parser.add_argument("--imgsz", type=int, default=1280)
@@ -239,7 +240,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--overlap-ratio", type=float, default=0.15)
     parser.add_argument("--raw-match-root", default=str(DEFAULT_RAW_MATCH_ROOT))
     parser.add_argument("--sequence-names", default=",".join(DEFAULT_SEQUENCE_NAMES))
-    parser.add_argument("--trackers", default="", help="Comma-separated tracker yaml paths. Defaults to the main four ablation configs.")
+    parser.add_argument(
+        "--trackers",
+        default="",
+        help="Comma-separated tracker yaml paths. Defaults to ByteTrack, RSA-IoU only, SGL only, and full SeaTrack.",
+    )
     parser.add_argument("--output-root", required=True, help="Root directory for cache, tracker outputs, and evaluations.")
     parser.add_argument("--cache-dir", default="", help="Optional detection cache directory. Defaults to <output-root>/det_cache.")
     parser.add_argument("--gt-file-name", default="gt.txt")
@@ -306,6 +311,7 @@ def main() -> None:
             results.append(future.result())
 
     suite_summary = {
+        "suite_type": "main_ablation",
         "detector": args.detector,
         "detector_mode": args.detector_mode,
         "imgsz": args.imgsz,

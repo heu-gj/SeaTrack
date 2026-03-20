@@ -1,0 +1,37 @@
+# SeaTrack full paper version: RSA-IoU + SGL enabled
+
+tracker_type: sealinetracker
+track_high_thresh: 0.25
+track_low_thresh: 0.1
+new_track_thresh: 0.25
+track_buffer: 30
+match_thresh: 0.8
+fuse_score: True
+
+use_adaptive_iou: True
+use_sea_geo_cost: True
+use_direction_aware_center: True
+use_asymmetric_scale: True
+use_scale_aware_weights: False
+use_ratio_loss: True
+
+adaptive_iou_alpha: 4.0
+adaptive_iou_beta: 12.0
+adaptive_iou_lambda_tau: 0.04
+adaptive_iou_min_scale: 1.0
+adaptive_iou_max_scale: 5.0
+adaptive_iou_x_bias: 1.0
+adaptive_iou_y_bias: 1.15
+adaptive_iou_eps: 1.0e-6
+
+geom_scale_transition: 0.05
+geom_center_y_weight: 0.6
+geom_scale_height_weight: 0.4
+
+use_recovery_matching: False
+recovery_match_thresh: 0.35
+recovery_motion_gate: 0.12
+recovery_motion_weight: 0.5
+recovery_center_weight: 0.3
+recovery_scale_weight: 0.2
+recovery_use_class_gate: True

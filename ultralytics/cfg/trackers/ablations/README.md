@@ -1,33 +1,46 @@
-SealineTracker ablation tracker YAMLs.
+SeaTrack paper ablation tracker YAMLs.
 
-Recommended usage:
+Retained paper-oriented configs:
 
 - `bytetrack_baseline.yaml`
   - Pure ByteTrack baseline.
-- `sealinetracker_full.yaml`
-  - Paper main version with innovation 1 + innovation 2 enabled.
-- `sealinetracker_innov1_only.yaml`
-  - Only Relative-Scale Adaptive IoU enabled.
-- `sealinetracker_no_adaptive_iou.yaml`
-  - Disable innovation 1 while keeping Sea-Geo Cost enabled.
-- `sealinetracker_no_sea_geo_cost.yaml`
-  - Disable innovation 2 and fall back to Adaptive IoU cost.
-- `sealinetracker_no_direction_center.yaml`
-  - Disable direction-aware center weighting.
-- `sealinetracker_no_asymmetric_scale.yaml`
-  - Disable asymmetric width-height scale weighting.
-- `sealinetracker_no_scale_aware_weights.yaml`
-  - Disable target-scale-dependent geometry weights.
+- `seatrack_rsa_iou.yaml`
+  - Only `RSA-IoU` enabled.
+- `seatrack_sgl.yaml`
+  - Only `SGL` enabled.
+- `seatrack_rsa_iou_sgl.yaml`
+  - Full paper version: `RSA-IoU + SGL`.
 
-Typical command:
+Fine-grained `SGL` configs:
+
+- `seatrack_sgl_wo_scl.yaml`
+  - `SGL` without `SCL`.
+- `seatrack_sgl_wo_srl.yaml`
+  - `SGL` without `SRL`.
+- `seatrack_sgl_wo_ssl.yaml`
+  - `SGL` without `SSL`.
+
+Removed from the current paper set:
+
+- duplicate legacy `sealinetracker_no_*` variants
+- `scale-aware weighting` ablation variants
+
+Typical commands:
 
 ```bash
-python E:\Code\PRCV\ultralytics\experiments_tool\sealine_mot_runner.py \
+python E:\Code\PRCV\ultralytics\experiments_tool\run_ablation_suite.py \
   --detector E:\path\to\best.pt \
-  --tracker E:\Code\PRCV\ultralytics\ultralytics\cfg\trackers\ablations\sealinetracker_full.yaml \
-  --sequence-names 0001,0002,0003 \
   --raw-match-root E:\Dataset\716\raw-match \
-  --out-dir E:\Code\PRCV\ultralytics\output\mot_results\ablation_main \
+  --output-root E:\Code\PRCV\ultralytics\output\ablation_main \
+  --imgsz 1280 \
+  --device 0
+```
+
+```bash
+python E:\Code\PRCV\ultralytics\experiments_tool\run_fine_grained_ablation_suite.py \
+  --detector E:\path\to\best.pt \
+  --raw-match-root E:\Dataset\716\raw-match \
+  --output-root E:\Code\PRCV\ultralytics\output\ablation_sgl \
   --imgsz 1280 \
   --device 0
 ```

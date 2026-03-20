@@ -102,8 +102,8 @@ def _plain_iou_similarity(track_box: np.ndarray, det_box: np.ndarray, image_shap
     return _bbox_iou(track_box, det_box), float(relative_scale)
 
 
-def adaptive_iou_distance(atracks: list, btracks: list, image_shape: tuple[int, int] | None, args) -> np.ndarray:
-    """Compute the Relative-Scale Adaptive IoU cost matrix for SealineTracker."""
+def rsa_iou_distance(atracks: list, btracks: list, image_shape: tuple[int, int] | None, args) -> np.ndarray:
+    """Compute the RSA-IoU cost matrix for SeaTrack."""
     if not getattr(args, "use_adaptive_iou", True):
         return iou_distance(atracks, btracks)
 
@@ -199,18 +199,18 @@ def _motion_distance_loss(track_box: np.ndarray, det_box: np.ndarray, image_shap
     return float(np.sqrt((tcx - dcx) ** 2 + (tcy - dcy) ** 2) / diag)
 
 
-def scale_aware_geometric_distance(
+def sgl_distance(
     atracks: list,
     btracks: list,
     image_shape: tuple[int, int] | None,
     args,
 ) -> np.ndarray:
-    """Compute the Scale-Aware Geometric Cost (SAGC) matrix for SealineTracker."""
+    """Compute the SGL cost matrix for SeaTrack."""
     atlbrs = _to_tlbr_list(atracks)
     btlbrs = _to_tlbr_list(btracks)
 
     if not getattr(args, "use_sea_geo_cost", True):
-        return adaptive_iou_distance(atracks, btracks, image_shape, args)
+        return rsa_iou_distance(atracks, btracks, image_shape, args)
 
     cost_matrix = np.zeros((len(atlbrs), len(btlbrs)), dtype=np.float32)
     if len(atlbrs) == 0 or len(btlbrs) == 0:
@@ -224,7 +224,7 @@ def scale_aware_geometric_distance(
         return 1 - ious
 
     if image_shape is None:
-        return adaptive_iou_distance(atracks, btracks, image_shape, args)
+        return rsa_iou_distance(atracks, btracks, image_shape, args)
 
     for row, track_box in enumerate(atlbrs):
         for col, det_box in enumerate(btlbrs):
@@ -242,7 +242,7 @@ def scale_aware_geometric_distance(
                 1.0,
                 args.geom_center_y_weight if getattr(args, "use_direction_aware_center", True) else 1.0,
             )
-            ratio_loss = _ratio_loss(track_box, det_box, args.adaptive_iou_eps)
+            ratio_loss = _ratio_loss(track_box, det_box, args.adaptive_iou_eps) if getattr(args, "use_ratio_loss", True) else 0.0
             height_weight = args.geom_scale_height_weight if getattr(args, "use_asymmetric_scale", True) else 0.5
             scale_loss = _scale_loss(
                 track_box,
@@ -273,7 +273,7 @@ def sea_recovery_distance(
         return cost_matrix
 
     if image_shape is None:
-        return scale_aware_geometric_distance(tracks, detections, image_shape, args)
+        return sgl_distance(tracks, detections, image_shape, args)
 
     for row, track in enumerate(tracks):
         track_box = atracks[row]
@@ -317,7 +317,24 @@ def sea_recovery_distance(
     return cost_matrix
 
 
+def adaptive_iou_distance(atracks: list, btracks: list, image_shape: tuple[int, int] | None, args) -> np.ndarray:
+    """Backward-compatible alias for RSA-IoU distance."""
+    return rsa_iou_distance(atracks, btracks, image_shape, args)
+
+
+def scale_aware_geometric_distance(
+    atracks: list,
+    btracks: list,
+    image_shape: tuple[int, int] | None,
+    args,
+) -> np.ndarray:
+    """Backward-compatible alias for SGL distance."""
+    return sgl_distance(atracks, btracks, image_shape, args)
+
+
 __all__ = (
+    "rsa_iou_distance",
+    "sgl_distance",
     "adaptive_iou_distance",
     "scale_aware_geometric_distance",
     "sea_recovery_distance",

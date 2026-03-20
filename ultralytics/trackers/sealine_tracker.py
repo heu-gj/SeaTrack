@@ -143,7 +143,7 @@ class SealineTracker(BYTETracker):
 
     def get_dists(self, tracks: list[STrack], detections: list[STrack]) -> np.ndarray:
         """Calculate association costs with innovation point 1 and innovation point 2."""
-        dists = matching_sealine.scale_aware_geometric_distance(tracks, detections, self.frame_shape, self.args)
+        dists = matching_sealine.sgl_distance(tracks, detections, self.frame_shape, self.args)
         if self.args.fuse_score:
             dists = matching_sealine.fuse_score(dists, detections)
         return dists
