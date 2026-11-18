@@ -205,8 +205,8 @@ def collect_sequence(
             det_cx = 0.5 * float(det_box[0] + det_box[2])
             det_cy = 0.5 * float(det_box[1] + det_box[3])
             residual = [
-                (det_cx - gt_cx) / gt_width,
-                (det_cy - gt_cy) / gt_height,
+                (det_cx - gt_cx) / det_width,
+                (det_cy - gt_cy) / det_height,
                 np.log(det_width / gt_width),
                 np.log(det_height / gt_height),
             ]
@@ -236,7 +236,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--cache-dir", required=True, help="Directory containing one SEQUENCE.pkl cache per sequence.")
     parser.add_argument("--sequence-names", required=True, help="Comma-separated non-test sequence names only.")
     parser.add_argument("--output-npz", required=True)
-    parser.add_argument("--modality-dir", default="visible", help="Dataset modality folder, e.g. visible or infrared.")
     parser.add_argument("--gt-file-name", default="gt.txt")
     parser.add_argument("--frame-id-mode", choices=("filename", "ordinal"), default="filename")
     parser.add_argument("--frame-id-offset", type=int, default=0)
@@ -270,7 +269,7 @@ def main() -> None:
     sequence_reports: dict[str, Any] = {}
     for sequence_name in sequence_names:
         cache_path = cache_dir / f"{sequence_name}.pkl"
-        gt_path = raw_root / sequence_name / args.modality_dir / "gt" / args.gt_file_name
+        gt_path = raw_root / sequence_name / "visible" / "gt" / args.gt_file_name
         sequence_data, counts = collect_sequence(
             sequence_name=sequence_name,
             cache_path=cache_path,
@@ -310,7 +309,6 @@ def main() -> None:
 
     report = {
         "output_npz": str(output_path),
-        "modality_dir": args.modality_dir,
         "sequence_names": sequence_names,
         "total_matches": len(merged["residuals"]),
         "zero_iou_matches": int(np.sum(np.asarray(merged["ious"]) <= 0.0)),
