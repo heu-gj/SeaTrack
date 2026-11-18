@@ -6,11 +6,11 @@ exported by an experiment script and returns a corrected XYAH measurement and
 its 4x4 observation covariance for the existing XYAH Kalman filter.
 
 Residual convention used during fitting:
-    e = [(cx_det-cx_gt)/w_gt, (cy_det-cy_gt)/h_gt,
+    e = [(cx_det-cx_gt)/w_det, (cy_det-cy_gt)/h_det,
          log(w_det/w_gt), log(h_det/h_gt)]
 
 At inference, the first two residual dimensions are mapped back to pixels using
-the detected box width/height. This is a statistical calibration model, not a
+the same detected box width/height normalization. This is a statistical calibration model, not a
 claim that consecutive-frame GT motion is detector localization noise.
 """
 
@@ -166,7 +166,7 @@ class ScaleConfidenceCalibrator:
             "confidence_bins_requested": int(confidence_bins),
             "shrinkage": float(shrinkage),
             "eigenvalue_floor": float(eigenvalue_floor),
-            "residual_definition": "normalized_center_xy_and_log_wh",
+            "residual_definition": "detection_normalized_center_xy_and_log_wh",
         }
         return self
 
