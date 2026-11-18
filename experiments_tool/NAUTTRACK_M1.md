@@ -24,7 +24,7 @@ outputs and GT annotations.
 
 ## Expected detection-cache format
 
-The collector reuses the cache format written by experiments_tool/run_ablation_suite.py:
+The collector reuses the cache format written by experiments_tool/run_ablation_suite.py or experiments_tool/cache_nauttrack_rgb_detections.py:
 
 - one pickle file per sequence, named SEQUENCE.pkl;
 - cache["frames"] is a list of frames;
@@ -36,7 +36,27 @@ This milestone is RGB-only. The GT path is fixed to:
     RAW_MATCH_ROOT/SEQUENCE/visible/gt/gt.txt
 
 
-## Step 1: collect detector-to-GT residuals
+## Step 1: build visible-RGB detection caches
+
+If the per-sequence detection caches from a previous SeaTrack experiment are already
+available, you can reuse them. Otherwise, generate caches without running a tracker:
+
+    python experiments_tool/cache_nauttrack_rgb_detections.py ^
+      --detector E:\\Code\\PRCV\\weights\\best.pt ^
+      --raw-match-root E:\\Dataset\\716\\raw-match ^
+      --sequence-names 0001,0002,0003 ^
+      --cache-dir output\\nauttrack\\det_cache ^
+      --detector-mode full ^
+      --imgsz 1280 ^
+      --conf 0.1 ^
+      --device 0
+
+The script reads only `RAW_MATCH_ROOT/SEQUENCE/visible/image`, writes one
+`SEQUENCE.pkl` file per sequence, and skips existing caches unless `--overwrite`
+is supplied. Use the same detector checkpoint and inference settings across all
+calibration splits.
+
+## Step 2: collect detector-to-GT residuals
 
 Pass only explicitly selected **training or calibration sequences**. Do not include
 benchmark test sequences.
@@ -62,7 +82,7 @@ If image names encode frame numbers, the default filename mode uses the trailing
 If GT frame numbering follows the sorted cache order instead, pass --frame-id-mode ordinal.
 Use --frame-id-offset to handle a verified zero-based/one-based offset.
 
-## Step 2: fit the conditional calibrator
+## Step 3: fit the conditional calibrator
 
 The NPZ file contains:
 - residuals: N x 4 normalized center/log-width/log-height residuals;
