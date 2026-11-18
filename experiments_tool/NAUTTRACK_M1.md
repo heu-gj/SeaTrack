@@ -8,12 +8,11 @@ tests a post-hoc detector localization calibrator.
 
 The available GT-to-GT statistics support scale-dependent inter-frame overlap degradation:
 
-| Dataset / modality | Small zero-IoU pairs | Medium | Large |
+| Dataset / split (RGB or visible only) | Small zero-IoU pairs | Medium | Large |
 |---|---:|---:|---:|
-| JMT-RGBT visible | 53.72% | 12.92% | 2.12% |
-| JMT-RGBT thermal | 63.84% | 15.10% | 4.56% |
-| JMT2022 train | 42.63% | 13.07% | 2.24% |
-| JMT2022 test1 | 32.10% | 9.64% | 1.43% |
+| JMT-RGBT visible RGB (59 sequences) | 53.72% | 12.92% | 2.12% |
+| JMT2022 train (38 sequences) | 42.63% | 13.07% | 2.24% |
+| JMT2022 test1 (45 sequences) | 32.10% | 9.64% | 1.43% |
 | JMT2022 all 83 sequences | 37.00% | 11.18% | 1.83% |
 
 These are **consecutive-frame GT box overlap statistics**. They motivate a small-object
@@ -32,13 +31,11 @@ The collector reuses the cache format written by experiments_tool/run_ablation_s
 - each frame contains image_name, shape=(height, width), and boxes;
 - boxes are an N x 6 array: x1, y1, x2, y2, confidence, class_id.
 
-The GT path is expected to be:
+This milestone is RGB-only. The GT path is fixed to:
 
-    RAW_MATCH_ROOT/SEQUENCE/MODALITY/gt/gt.txt
+    RAW_MATCH_ROOT/SEQUENCE/visible/gt/gt.txt
 
-The default modality directory is visible. For a thermal experiment, pass the actual
-thermal directory name used by the dataset. Do not assume the visible and thermal
-calibrators are interchangeable.
+No infrared detector, infrared GT, or RGB-T fusion path is used in NautTrack M1.
 
 ## Step 1: collect detector-to-GT residuals
 
@@ -49,7 +46,6 @@ benchmark test sequences.
       --raw-match-root E:\Dataset\716\raw-match ^
       --cache-dir E:\Code\PRCV\SeaTrack\output\det_cache ^
       --sequence-names 0001,0002,0003 ^
-      --modality-dir visible ^
       --output-npz output\nauttrack\visible_fit.npz
 
 The collector uses a one-to-one Hungarian assignment with a permissive center/size
@@ -109,21 +105,18 @@ The 31-sequence diagnostic subset is not a substitute for the full 45-sequence t
 
 ### JMT-RGBT
 
-The latest GT audit covers 59 sequences, but the split membership of those 59 sequences
-must be supplied explicitly. Do not infer train/validation/test membership from the
-fact that a GT file exists.
-
-Fit separate visible and thermal calibrators if both modalities are evaluated. The
-thermal GT overlap degradation is stronger in the reported statistics, but this alone
-does not establish larger detector localization error. Thermal detector outputs and
-same-frame thermal detection-to-GT residuals are required.
+The latest visible-RGB GT audit covers 59 sequences. The split membership of those
+sequences must be supplied explicitly. Do not infer train/validation/test membership
+from the fact that a GT file exists. This NautTrack milestone uses visible RGB only.
 
 ### Important methodological boundary
 
-The calibration residuals are detector-to-GT errors in the same frame. They must not be
-replaced with consecutive-frame same-ID GT displacement, artificial pixel shifts, or
-the difference between a track prediction and a detection. Those quantities describe
-different phenomena.
+The calibration residuals are detector-to-GT errors in the same RGB frame. Their center
+components are normalized by the matched detection width and height, so inference can
+map the fitted residual distribution back into pixel coordinates consistently. They
+must not be replaced with consecutive-frame same-ID GT displacement, artificial pixel
+shifts, or the difference between a track prediction and a detection. Those quantities
+describe different phenomena.
 
 ## Current implementation scope
 
