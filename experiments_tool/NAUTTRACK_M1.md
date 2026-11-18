@@ -35,7 +35,6 @@ This milestone is RGB-only. The GT path is fixed to:
 
     RAW_MATCH_ROOT/SEQUENCE/visible/gt/gt.txt
 
-No infrared detector, infrared GT, or RGB-T fusion path is used in NautTrack M1.
 
 ## Step 1: collect detector-to-GT residuals
 
